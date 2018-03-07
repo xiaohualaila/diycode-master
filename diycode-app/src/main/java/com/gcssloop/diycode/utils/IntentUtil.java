@@ -53,7 +53,7 @@ public class IntentUtil {
      * 打开支付宝
      */
     public static void openAlipay(Context context) {
-        if (AppUtil.isAvailable(context, "com.eg.android.AlipayGphone")) {
+        if (AppUtil.isAvailable(context, "com.eg.android.AlipayGphone")) {//判断是否安装了支付宝
             Intent intent = new Intent(Intent.ACTION_VIEW);
             String QRCode = "HTTPS://QR.ALIPAY.COM/FKX07101FYSJGTNCAPQW39";
             intent.setData(Uri.parse("alipayqr://platformapi/startapp?saId=10000007&qrcode=" + QRCode));
